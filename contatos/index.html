@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contatos</title>
+	<link type="text/css" rel="stylesheet" href="../estilo.css">
+	<link type="text/css" rel="stylesheet" href="../styles.css">
+	
+	
+	<style>
+		body{background: white}
+		
+		
+		
+	</style>	
+</head>
+<body>
+	<section class="nav-bar">
+		<div class="nav-container">
+		  <nav>
+			<div class="nav-mobile"><p>Menu</p><a id="nav-toggle" href="#!"><span></span></a></div>
+			<ul class="nav-list">
+			  <li>
+				<a href="../index.php"><img src="../images/icon_home.png" alt="home" class="icon_home"> Página Inicial</a>
+			  </li>
+			  <li>
+				<a href="../sobre_nos/index.html"><img src="../images/icon_sobrenos.png" alt="sobre-nos" class="icon_sobre_nos"> Sobre Nós</a>
+			  </li>
+			  <li>
+				<a href="#" class="active"><img src="../images/icon_contactos.png" alt="contatos" class="icon_contatos"> Contatos</a>
+			  </li>
+			  <li>
+				<a href="../encomendas_racao/index.php"><img src="../images/icon_encomendas_racao.png" alt="encomendas-racao" class="icon_encomendas"> Encomendas Ração</a>
+			  </li>
+			  <li>
+				<a href="../login/"><img src="../images/icon_gestao.png" alt="estado_encomenda" class="icon_estado_encomenda"> Administrador</a>
+			  </li>
+			</ul>
+		  </nav>
+		</div>
+	  </section> <!-- .nav-bar -->
+	
+	<img src="../images/banner_contatos.jpg" alt="contatos" class="banner">
+	<div class="contactos">
+	<h1>Entre em contato connosco!</h1>
+	</div>
+	<br>
+	<!--<br>
+	<br>-->
+	<div>
+	<p class="telefone_email">Filipe Fidalgo: 928 021 424</p>
+	<p class="telefone_email">Email: escola.pshycomotora.canina@gmail.com</p>	
+	</div>
+	
+	<div class="redes_sociais">
+		<h5>As nossas redes sociais</h5>
+		<div>
+		<a href="https://www.instagram.com/escola.phsycomotora.canina/" target="_blank"><img src="../images/instagram.png"></a>	
+		
+	 <a href="https://www.facebook.com/FilipeFidalgoTreinoCaninoviseu?locale=pt_BR" target="_blank"><img src="../images/facebook.png"></a>
+		
+	 <a href="https://wa.me/351928021424" target="_blank">
+    <img src="../images/whatsapp.png" alt="Fale connosco pelo WhatsApp">
+  </a>
+</div>	
+		
+	</div>
+			
+	<br>
+	<br>
+
+	<footer>
+		<p>&copy Copyright 2024 Escola Pshycomotora Canina | Todos os direitos reservados <br/> <a href="../sobre_nos/politica_privacidade.php"> Política de Privacidade</a></p>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+		(function($) { 
+  $(function() { 
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      $('.dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); 
+})(jQuery);
+
+	</script>
+	
+</body>
+</html>

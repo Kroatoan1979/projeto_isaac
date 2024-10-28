@@ -1,0 +1,653 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	/*Estilo letra*/
+	 font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; /*position:relative;*/
+	 max-width: 100vw;
+	 height: auto;
+}
+
+h1, h2{
+	text-transform: uppercase;
+}
+
+/* MENU */
+.nav-bar {
+  height: 70px;
+  background: #ffffff;
+  width: 100%;
+}
+
+.nav-container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+nav {
+	float: right;
+  	margin-right: -20%;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #ffffff;
+  color: #262626;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #262626;
+  color: #ffffff;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  height: 70px;
+  width: 70px;
+}
+
+.nav-mobile p{
+	color: darkblue;
+	padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+   
+	width: 100vw;
+    padding: 70px 0 15px;
+	float: left;
+  }
+
+  .nav-container{
+	max-width: 100vw;
+	margin-left: -3.5%;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+	padding-left: 15%;
+	 
+  }
+
+
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 25px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: darkblue;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/* PÁGINA INICIAL */
+.imagem_index{
+	display: flex;
+	justify-content: center;
+	margin-top: -2%;
+}
+
+/* SOBRE NOS */
+
+.brand { /* imagem formulario */
+	position: absolute;
+	padding-left: 20px;
+	float: left;
+	line-height: 90px;
+  }
+
+
+.titulo h1{
+	font-size: 22px;
+	margin-bottom: 2%;
+	margin-top: 5%;
+}
+
+.titulo h2{
+	font-size: 18px;
+}
+
+.instalacoes{
+	text-align: center;
+}
+
+.texto_servicos{
+	text-align: justify;
+	line-height: 1.6;
+	font-size: 14px;
+	margin-left: 30%;
+}
+
+.texto_servicos li {
+	list-style: none;
+}
+
+.texto_servicos img{
+	margin-right: 1%;
+}
+
+.image-container figcaption{
+	font-size: 12px;
+	text-align: center;
+}
+
+/* CONTATOS */
+
+.contactos h1{
+	text-align: center;
+	font-size: 22px;
+	margin-top: 5%;
+}
+
+.redes_sociais{
+	margin-top: -5%;
+}
+
+.redes_sociais h5{
+	color:darkblue;
+	font-size: 16px;
+}
+
+.redes_sociais div{
+	margin-left: 25%;
+	margin-top: 4%;
+}
+
+.redes_sociais a{
+	padding-right: 5px;
+}
+
+/* ENCOMENDAS - index */
+.titulo_encomenda{
+	font-size: 22px;
+	text-align: center;
+}
+
+.sub_titulo_encomenda{
+	font-size: 18px;
+	text-align: center;
+}
+
+.pagamento_racao {
+	text-align: center;
+	color: darkblue;
+	font-size: 14px;
+}
+
+.formulario{
+	margin-left: 10%;
+}
+
+select{
+	width: 40%;
+}
+
+.glow-on-hover{
+	margin-top: 5%;
+	width: 30%;
+}
+
+.formulario .glow-on-hover{
+	margin-left: 35%;
+}
+
+/* ENCOMENDAS - formulario */
+
+.titulo_formulario h1{
+	font-size: 20px;
+	margin-left: -5%;
+	margin-top: 5%;
+}
+
+hr{
+	width: 90%;
+	margin-left: 5%;
+}
+
+form div{
+	margin-left: 5%;
+	margin-bottom: 2%;
+}
+
+select {
+	width: 80%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+   
+  input[type=text]{
+	width: 90%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+
+  .inputs{
+	margin-left: 5%;
+  }
+ 
+
+
+div form .glow-on-hover{
+	margin-left: 35%;
+}
+
+/* RODAPE */
+footer{
+	background: darkblue;
+	color: #ffffff;
+	height: 80px;
+	font-size: 14px;
+	margin-top: 5%;
+	bottom: 0%;
+	width: 100%;
+	padding: 5px;
+}
+
+footer a{
+	color:#ffffff;
+	text-decoration: none;
+	padding-top: 5%;
+}
+  
+/* ENCOMENDAS - lista */
+.user{
+	float: right;
+	margin-right: 5%;
+	top: 5%;
+}
+
+.user a img{
+	float: right;
+	margin-right: 15%;
+	margin-top: 2%;
+}
+
+.titulo_lista{
+	margin-top: 10%;
+	display: flex;
+}
+
+.titulo_lista h1{
+	margin-left: 35%;
+	margin-bottom: 5%;
+}
+hr{
+	margin-bottom: 5%;
+}
+/* Table Styles */
+
+.table-wrapper{
+    margin: 80px 70px 70px;
+	overflow-x: auto;
+	height: 32vh;
+	
+}
+
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    width: 80%;
+	max-width: 100%;
+    white-space: nowrap;
+	color: #11101d;
+	margin-left: 10%;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 14px;
+}
+
+.fl-table thead th {
+    color:  #11101d;
+    background-color: #ffffff;
+}
+
+.fl-table td img{
+    width: 40px;
+  padding-top: 12px;
+  margin-left: 1%;
+}
+
+/* POLÍTICA PRIVACIDADE */
+.politica_box{
+	margin-left: 10%;
+	margin-top: 5%;
+	box-shadow: 0 2px 12px 0 rgba(000, 000, 000, 0.8);
+	border-radius: 5%;
+	padding: 5%;
+	width: 80%;
+}
+
+.politica_box h1, h2{
+	font-size: 20px;
+	padding-bottom: 2%;
+
+}
+
+.politica_box h4{
+	font-size: 16px;
+	color: darkblue;
+	padding-bottom: 2%;
+}
+
+.politica_box p{
+	padding-bottom: 2%;
+}
+/* MEDIA QUERIES => MOBILE */
+
+@media screen and (max-width: 480px){
+	/* MENU */
+	.nav-mobile {
+		right: 0%;
+	}
+
+	nav {
+		width: 100vw;
+		padding: 70px 0 15px;
+		float: left;
+	}
+	
+	.nav-container {
+	  	max-width: 100vw;
+	  	margin-left: -3.5%;
+	}
+
+	
+	
+	  
+	/* PÁGINA INICIAL */
+	.imagem_index{
+		margin-top: 0%;
+	}
+
+	/* SOBRE NÓS */
+	.banner{
+		background-size: cover;
+	}
+
+	.titulo h1{
+		width: 90%;
+	}
+
+	.texto{
+		text-align: left;
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 90%;
+	}
+
+	.image-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5px;
+		margin-left: 5%;
+		
+	}
+
+	.image-container figcaption{
+		text-align: center;
+		font-size: 12px;
+	}
+
+	/* CONTATOS */
+	.banner{
+		width: 100%;
+	}
+
+	.redes_sociais{
+		margin-left: 30%;
+	}
+	
+	.redes_sociais h5{
+		color:darkblue;
+		font-size: 16px;
+	}
+	
+	.redes_sociais div{
+		margin-left: 25%;
+		margin-top: 2%;
+	}
+
+		/* ENCOMENDAS - index */
+		.racoes {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(200px, 1fr));
+			width: 70%;
+			margin-left: -5%;
+		}
+
+		
+		.racoes img{
+			padding-right: -2%;
+		}
+
+		.racoes figcaption{
+			font-size: 12px;
+		}
+
+		.racoes figcaption b{
+			margin-left: 5%;
+		}
+
+		/* ENCOMENDAS - formulario */
+		.titulo_formulario{
+			margin-top: 5%;
+			margin-bottom: 2%;
+			text-align: center;
+		}
+		label{
+			margin-left: 5%;
+		}
+
+		input[type=text]{
+			width: 90%;
+			margin-left: 5%;
+			margin-bottom: 5%;
+		  }
+		
+	
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px){
+	/* PÁGINA INICIAL */
+	.nav-container{
+		margin-left: 0%;
+	}
+
+	/* SOBRE NOS */
+	.image-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5px;
+		margin-left: 15%;
+	}
+
+	.image-container figcaption{
+		text-align: center;
+		margin-left: -40%;
+		font-size: 14px;
+		
+	}
+
+	/* CONTATOS*/
+	.redes_sociais{
+		margin-left: 40%;
+	}
+
+	/* ENCOMENDAS - index */
+	.racoes{
+		margin-left: -5%;
+	}
+
+	.racoes figure{
+		margin-top: 5%;
+	}
+
+	.racoes figcaption{
+		margin-left: 10%;
+	}
+
+	.formulario{
+		margin-left: 15%;
+	}
+
+	.formulario select{
+		width: 80%;
+	}
+
+	.formulario .glow-on-hover{
+		margin-left: 30%;
+	}
+
+	/* ENCOMENDAS - formulario */
+	.titulo_formulario{
+		text-align: center;
+	}
+
+	input[type=text]{
+		width: 90%;
+		margin-left: 5%;
+		margin-bottom: 5%;
+	}
+
+	label{
+		margin-left: 5%;
+	}
+	
+	/* ENCOMENDAS - lista */
+	.user{
+		margin-top: -8%;
+	}
+
+	.titulo_lista{
+		margin-top: 15%;
+	}
+
+	/* RODAPE */
+	footer{
+		bottom: 0;	
+	}
+}
+
+/* COOKIES */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+    display: none; /* Escondido por padrão */
+}
+
+.cookie-banner button {
+    background-color: white;
+    color: #079c31;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+	margin-bottom: 5%;
+}
+
+.cookie-banner button:hover {
+    background-color: #2ecc71;
+	color: white;
+}
+
+
+#reject-cookies {
+background-color: white;
+color: #e74c3c;
+}
+
+#reject-cookies:hover {
+    background-color: #c0392b;
+	color: white;
+}

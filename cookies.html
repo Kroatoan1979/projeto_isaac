@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+          Cookie Consent Box using HTML CSS & JavaScript
+      </title>
+    <!--<link rel="stylesheet"
+          href="style.css">-->
+    <style>
+		.cookies {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f3f3f3;
+}
+
+#consentBox {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#consentBox.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+::selection {
+    color: #fff;
+    background: #229a0f;
+}
+
+#consentContent p {
+    color: #858585;
+    margin: 10px 0 20px 0;
+}
+
+#consentContent .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.consentButton,
+.rejectButton {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consentButton {
+    background: #2a910b;
+    margin-right: 10px;
+}
+
+.rejectButton {
+    color: #111211;
+    background: transparent;
+    border: 2px solid #099c2c;
+    text-decoration: none;
+}
+
+#consentBox img {
+    max-width: 90px;
+}
+
+#consentHeader {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+    </style>
+</head>
+
+<body class="cookies">
+    <div id="consentBox">
+		<!-- COLOCAR LOGO DA ESCOLA -->
+        <img src=
+""
+             alt="Escola Pshycomotora Canina">
+        <div id="consentContent">
+            <header id="consentHeader">
+                  Cookies: A escolha é sua
+              </header>
+            <p>
+				Usamos cookies para que nosso site funcione bem
+				para você e para que possamos melhorá-lo continuamente.
+              <br>
+			  Os cookies necessários para 
+              manter o site funcionando estão sempre ativos
+            </p>
+            <div class="buttons">
+                <button class="consentButton">
+                      <a href="pagina_inicial.php"></a>Aceitar Cookies
+                  </button>
+                <button class="rejectButton">
+                      Rejeitar
+                  </button>
+            </div>
+        </div>
+    </div>
+    <!--<script src="script.js"></script>-->
+	<script>
+		const consentBox = 
+    document.getElementById("consentBox");
+const acceptBtn = 
+    document.querySelector(".consentButton");
+const rejectBtn = 
+    document.querySelector(".rejectButton");
+
+acceptBtn.onclick = () => {
+    document.cookie = "CookieBy=GeeksForGeeks; max-age="
+        + 60 * 60 * 24;
+    if (document.cookie) {
+        consentBox.classList.add("hide");
+    } else {
+        alert
+            ("Cookie can't be set! Please"+
+              " unblock this site from the cookie"+
+              " setting of your browser.");
+    }
+};
+
+rejectBtn.onclick = () => {
+    alert(
+        "Cookies rejected. Some functionality may be limited.");
+    consentBox.classList.add("hide");
+};
+
+let checkCookie = 
+    document.cookie.indexOf("CookieBy=GeeksForGeeks");
+checkCookie !== -1 ? consentBox.classList.add("hide") :
+    consentBox.classList.remove("hide");
+	</script>
+</body>
+
+</html>

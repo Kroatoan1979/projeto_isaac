@@ -1,0 +1,85 @@
+código para pop up, para aviso de utilização de cookies para um website
+
+
+HTML
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Conteúdo do site -->
+    <h1>Bem-vindo ao nosso site!</h1>
+
+    <!-- Pop-up de aviso de cookies -->
+    <div class="cookie-popup" id="cookiePopup">
+        <p>Utilizamos cookies para melhorar sua experiência de navegação. Ao continuar navegando, você concorda com nossa <a href="#">Política de Cookies</a>.</p>
+        <button id="acceptCookies">Aceitar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+______________________________________________________________________________
+
+CSS
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: none; /* Inicialmente escondido */
+    z-index: 1000;
+}
+
+.cookie-popup a {
+    color: #1E90FF;
+    text-decoration: underline;
+}
+
+.cookie-popup button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.cookie-popup button:hover {
+    background-color: #1C86EE;
+}
+
+_______________________________________________________________________________
+JAVASCRIPT
+
+// Função para verificar se o cookie já foi aceito
+function checkCookie() {
+    let cookieAccepted = localStorage.getItem('cookieAccepted');
+    if (!cookieAccepted) {
+        document.getElementById('cookiePopup').style.display = 'block';
+    }
+}
+
+// Função para aceitar os cookies e fechar o popup
+document.getElementById('acceptCookies').addEventListener('click', function() {
+    localStorage.setItem('cookieAccepted', 'true');
+    document.getElementById('cookiePopup').style.display = 'none';
+});
+
+// Chama a função para verificar o estado do cookie ao carregar a página
+window.onload = function() {
+    checkCookie();
+};

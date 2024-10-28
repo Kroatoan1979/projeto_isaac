@@ -1,0 +1,31 @@
+Área de Administrador
+username: FilipeFidalgo
+password: FilipeF
+
+
+
+1- Puppy 15KG 49.95€
+
+2- Adult Large Breed 15KG 48€
+
+3- Adult Sensitive 15KG 61.50€
+
+4- Adult Medium Breed 15KG 47.50€
+
+5- Adult Mini Breed 8KG 32.75€
+
+6- Senior 15KG 41.95€
+
+7- Puppy 3KG 13.50€
+
+8- Puppy Large Breed 15KG 50.95€
+
+9- Adult Grain Free 15KG 60.95€
+
+10- Adult Mini Breed 3KG 14.75€
+
+11- Adult Medium Breed 3KG 12.75€
+
+12- Adult Grain Free 3KG 15.75€
+
+13- Adult Sensitive 3KG 15.70€
